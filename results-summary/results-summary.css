@@ -1,0 +1,11 @@
+:root {
+    --background: #ECF2FF;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+}
+
