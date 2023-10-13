@@ -13,12 +13,13 @@
 body {
     background-color: var(--background);
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .product-card {
     display: flex;
     width: 343px;
-    max-width: 80%;
     background-color: white;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -27,7 +28,7 @@ body {
     flex-direction: column;
 }
 
-.product-img{
+.product-img img{
     border-radius: 10px 10px 0 0;
 }
 
@@ -35,7 +36,11 @@ article {
     display: flex;
     margin: 24px;
     flex-direction: column;
-    gap: 16px;
+    margin: 0;
+}
+
+.big-img {
+    display: none;
 }
 
 h2 {
@@ -43,8 +48,8 @@ h2 {
     font-size: 12px;
     color: var(--text);
     text-transform: uppercase;
-    margin: 0;
-    
+    margin: 24px 24px 0 24px;
+    letter-spacing: 5px;
 }
 
 h1 {
@@ -53,11 +58,66 @@ h1 {
     text-transform: capitalize;
     font-size: 32px;
     color: var(--heading);
-    margin: 0;
+    margin: 12px 24px 0 24px;
 }
 
 p {
     margin: 0;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 23px;
+    margin: 16px 24px 0 24px;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 24px 24px 0 24px;
+}
+
+.price .price-new {
+    color: #3D8168;
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 0;
+}
+
+.price .price-old {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 23px;
+    text-decoration: line-through;
+    margin: 0 0 0 19px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 24px;
+}
+
+.btn {
+    border-radius: 8px;
+    color: white;
+    background-color: var(--cta);
+    border: 0px solid var(--cta);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: var(--cta-hover);
+}
+
+.add-to-cart {
+    width: 295px;
+    height: 48px;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 /* Small (sm) */
@@ -71,7 +131,7 @@ p {
     .product-card {
         display: flex;
         width: 600px;
-        max-width: 80%;
+        height: 450px;
         background-color: white;
         border-radius: 10px;
         font-family: 'Montserrat', sans-serif;
@@ -83,8 +143,28 @@ p {
     article {
         display: flex;
         flex-direction: column;
-        margin: 0;
     }
+    
+    .product-img img{
+        border-radius: 10px 0 0 10px;
+    }
+
+    .big-img {
+        display: block;
+        border-radius: 19px 0 0 10px;
+    }
+
+    .small-img {
+        display: none;
+    }
+
+    .add-to-cart {
+        width: 236px;
+        height: 48px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
 }
 
 /* Large (lg) */
