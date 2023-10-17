@@ -27,6 +27,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: #1C232B;
 }
 
 .product-img img{
